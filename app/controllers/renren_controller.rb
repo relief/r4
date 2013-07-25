@@ -102,7 +102,8 @@ class RenrenController < ApplicationController
 	  'baf04a7ca0b34a9f849c103760c29b4b'
     end
     def redirect_uri 
-	  "http://localhost:3000/renren/loginnext"
+	 # "http://localhost:3000/renren/loginnext"
+	  "https://zju.heroku.com/renren/loginnext"
     end
   #  def access_token
 #	session[:renren_access_token]=access_token.token
