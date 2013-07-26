@@ -3,8 +3,13 @@ module RenrenApi
      ClientID = '238917'
      Api_key  = 'ef1c4b01abd34dd59e1123c8bf20bc15'
      Api_secret = 'baf04a7ca0b34a9f849c103760c29b4b'
-     Redirect_uri =  "http://localhost:3000/renren/loginnext"
-
+     def redirect_url
+	if request.host.include? "heroku"
+	   "http://zju.heroku.com/renren/loginnext"
+	else
+	   "http://localhost:3000/renren/loginnext"
+        end
+     end
      def setRRApiUri(requestType)
             uriparser = URI::Parser.new()
             case requestType

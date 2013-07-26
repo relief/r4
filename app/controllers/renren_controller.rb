@@ -18,7 +18,7 @@ class RenrenController < ApplicationController
     def login
 	redirect_to client.authorize_url(
  	   :client_id    => ClientID,
-	   :redirect_uri => Redirect_uri,
+	   :redirect_uri => redirect_url,
 	   :response_type=> 'code',
 	   :scope => 'read_user_feed'
 	)		
@@ -27,7 +27,7 @@ class RenrenController < ApplicationController
         @access_token = client.get_token({
 	      :client_id => Api_key,
 	      :client_secret => Api_secret,
-	      :redirect_uri => Redirect_uri,
+	      :redirect_uri => redirect_url,
 	      :code => params[:code],
 	      :grant_type => "authorization_code"
 	})
