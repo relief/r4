@@ -1,3 +1,30 @@
-user <%=@user %>
-user:<%=@user["name"]%> 
-uid :<%=@user["id"]%>
+<h1> <%=@user["name"] %> </h1>
+<h2> id: <%=@userId  %>  <%= image_tag(@user["avatar"][3]["url"], alt: "Photo") %></h2>
+<h3> 用户基本数据 </h3>
+<p> 是否为星级用户: <% @res["star"] %> </p>
+<p> 用户基本信息: <%= @res["basicInformation"] %> </p>
+<p> 用户学校信息:  <%= @res["education"] %> 	</p>
+<p> 工作信息:  <%= @res["work"] %></p>
+<p> 喜欢:  <%= @res["like"] %></p>
+<p> 情感状态: <%= @res["emotionalState"] %></p>
+<h3> 用户主页信息 </h3>
+<p> 应用数量: <%= @profile["appCount"] %> </p>
+<p> 访问人数: <%= @profile["visitorCount"] %> </p>
+<p> 状态数量: <%= @profile["statusCount"] %> </p>
+<p> 日志数量: <%= @profile["blogCount"] %> </p>
+<p> 相册数量: <%= @profile["albumCount"] %> </p>
+<p> 分享数量: <%= @profile["shareCount"] %> </p>
+<p> 好友数量: <%= @profile["friendCount"] %> </p>
+<h3> 新鲜事 </h3>
+<p> 1 <%= @feed[0] %>  </p>
+<p> 2 <%= @feed[1] %>  </p>
+<p> 3 <%= @feed[2] %>  </p>
+<p> 4 <%= @feed[3] %>  </p>
+<p> 5 <%= @feed[4] %>  </p>
+<p> 6 <%= @feed[5] %>  </p>
+<p> 7 <%= @feed[6] %>  </p>
+<p> 8 <%= @feed[7] %>  </p>
+<p> 9 <%= @feed[8] %>  </p>
+<p> 10 <%= @feed[9] %>  </p>
+<h3> 好友列表 </h3>
+<%= @friend_list %>
