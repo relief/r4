@@ -45,7 +45,7 @@ class RenrenController < ApplicationController
 	session[:renren_expires_in]=res["renren_token"]["expires_in"]
 	session[:renren_refresh_token]=res["renren_token"]["refresh_token"]
       
-	redirect_to "/renren/user"#定向到我们的应用页面         
+	redirect_to root_url#"/renren/user"#定向到我们的应用页面         
     end
     def info
 	session_key = session[:renren_session_key]
