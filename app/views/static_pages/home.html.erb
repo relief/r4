@@ -16,9 +16,13 @@
     </aside>
     <div class="span8">
       <h3>Micropost Feed</h3>
-      <%= render 'shared/feed' %>
+      	<%= render 'shared/feed' %>
 	<% if connect_renren? %>
-      <%= render 'renren/renren_info' %>
+      		<%= render 'renren/renren_info' %>
+		<%= link_to "基本信息", renren_basic_info_path %>
+		<%= link_to "主页信息", renren_profile_path %>
+		<%= link_to "新鲜事",   renren_feed_path %>
+		<%= link_to "好友列表", renren_friend_list_path %>
 	<% end %>
     </div>
   </div>  

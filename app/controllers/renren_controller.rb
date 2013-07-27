@@ -56,33 +56,12 @@ class RenrenController < ApplicationController
     def info
 	session_key = session[:renren_session_key]
     end
-    def user         
-	session_key=session[:renren_session_key]
-	# 获得名字，图片，id
-	uri = setRRApiUri("user_login_get")
-	params = setRRApiParam("user_login_get", "")
-	uri.query = URI.encode_www_form( params)
-	@user = (JSON Net::HTTP.get(uri))["response"]
- 	@userId =@user["id"]	
-	# 获得用户基本数据
-	uri = setRRApiUri("user_get")
-	params = setRRApiParam("user_get", @userId)
-	uri.query = URI.encode_www_form( params )
-	@res  = (JSON Net::HTTP.get(uri))["response"]
-	# 获得主页信息
-	uri = setRRApiUri("profile_get")
-	params = setRRApiParam("profile_get", @userId)
-	uri.query = URI.encode_www_form( params )
-	@profile  = (JSON Net::HTTP.get(uri))["response"]
-	# 获得用户新鲜事
-	uri = setRRApiUri("feed_list")
-	params = setRRApiParam("feed_list", @userId)
-	uri.query = URI.encode_www_form( params )
-	@feed  = (JSON Net::HTTP.get(uri))["response"]
-	# 获得用户所有好友	
-	uri = setRRApiUri("friend_list")
-	params = setRRApiParam("friend_list", @userId)
-	uri.query = URI.encode_www_form( params )
-	@friend_list = (JSON Net::HTTP.get(uri))["response"]
-    end        
+    def basic_info
+    end
+    def profile  
+    end
+    def feed
+    end
+    def friend_list
+    end
 end 

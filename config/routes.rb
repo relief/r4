@@ -21,5 +21,8 @@ SampleApp::Application.routes.draw do
   match '/renren/logout', to: 'renren#logout',  via: 'get' 
   match '/renren/loginnext', to: 'renren#loginnext', via: [:get, :post]
   match '/renren/info',  to: 'renren#info',     via: 'get'
-  match '/renren/user', to: 'renren#user', via: [:get, :post]
+  match '/renren/basic_info', to: 'renren#basic_info', via: :get
+  match '/renren/profile', to: 'renren#profile', via: :get
+  match '/renren/feed', to: 'renren#feed', via: :get
+  match '/renren/friend_list', to: 'renren#friend_list', via: :get
 end
