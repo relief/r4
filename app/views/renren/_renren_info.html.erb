@@ -1,42 +1,4 @@
-<% getRenrenInfo_4Root %>
-<h1> <%= @renren_user["name"] %> </h1>
-<h2> id: <%=@renren_userId  %>  <%= image_tag(@renren_user["avatar"][3]["url"], alt: "Photo") %></h2>
-<h3> 用户基本数据 </h3>
-<p> 性别: <%= @renren_basic_info["basicInformation"]["sex"] %> </p>
-<p> 生日: <%= @renren_basic_info["basicInformation"]["birthday"] %> </p>
-<p> 家乡: <%= @renren_basic_info["basicInformation"]["homeTown"] %> </p>
-<p> 学校信息:  </p>
-	<%= schoolNum = @renren_basic_info["education"].count %>
-	<% i = 0 %>
-	<% while i < schoolNum do %>
-	   <p> <%= @renren_basic_info["education"][i] %> </p>
-	   <p> <%= @renren_basic_info["education"][i] %> </p>
-	   <p> <%= @renren_basic_info["education"][i] %> </p>
-	   <p> <%= @renren_basic_info["education"][i] %> </p>
-	   <% i = i + 1 %>
-	<% end %>
-<p> 工作信息:  <%= @renren_basic_info["work"] %></p>
-<p> 喜欢:  <%= @renren_basic_info["like"] %></p>
-<p> 情感状态: <%= @renren_basic_info["emotionalState"] %></p>
-<h3> 用户主页信息 </h3>
-<p> 应用数量: <%= @renren_profile["appCount"] %> </p>
-<p> 访问人数: <%= @renren_profile["visitorCount"] %> </p>
-<p> 状态数量: <%= @renren_profile["statusCount"] %> </p>
-<p> 日志数量: <%= @renren_profile["blogCount"] %> </p>
-<p> 相册数量: <%= @renren_profile["albumCount"] %> </p>
-<p> 分享数量: <%= @renren_profile["shareCount"] %> </p>
-<p> 好友数量: <%= @renren_profile["friendCount"] %> </p>
-<h3> 新鲜事 </h3>
-<%= @renren_feed.count %>
-<p> 1 <%= @renren_feed[0] %>  </p>
-<p> 2 <%= @renren_feed[1] %>  </p>
-<p> 3 <%= @renren_feed[2] %>  </p>
-<p> 4 <%= @renren_feed[3] %>  </p>
-<p> 5 <%= @renren_feed[4] %>  </p>
-<p> 6 <%= @renren_feed[5] %>  </p>
-<p> 7 <%= @renren_feed[6] %>  </p>
-<p> 8 <%= @renren_feed[7] %>  </p>
-<p> 9 <%= @renren_feed[8] %>  </p>
-<p> 10 <%= @renren_feed[9] %>  </p>
-<h3> 好友列表 </h3>
-<%= @renren_friend_list %>
+<% renren_user = query_renren "user_login_get" %>
+<h1> <%= renren_user["name"] %> </h1>
+<h2> id: <%=renren_userId  %>  </h2>
+<h2> <%= image_tag(renren_user["avatar"][3]["url"], alt: "Photo") %></h2>
