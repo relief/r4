@@ -1,3 +1,7 @@
 <%= form_tag("/renren/login", method: "get") do %>
   <%= submit_tag "绑定人人", class: "btn btn-large btn-primary"  %>
 <% end %>
+<%= form_tag("/renren/logout", method: "get") do %>
+   <%= submit_tag "解除人人绑定", class: "btn btn-large btn-primary"  %>
+<% end %>
+

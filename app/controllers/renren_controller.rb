@@ -23,6 +23,10 @@ class RenrenController < ApplicationController
 	   :scope => 'read_user_feed'
 	)		
     end
+    def logout
+	cookies.delete :renren_access_token
+	redirect_to root_url
+    end
     def loginnext
         @access_token = client.get_token({
 	      :client_id => Api_key,

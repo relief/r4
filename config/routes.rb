@@ -17,7 +17,8 @@ SampleApp::Application.routes.draw do
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
  
-  match '/renren/login', to: 'renren#login',    via: 'get' 
+  match '/renren/login', to: 'renren#login',    via: 'get'
+  match '/renren/logout', to: 'renren#logout',  via: 'get' 
   match '/renren/loginnext', to: 'renren#loginnext', via: [:get, :post]
   match '/renren/info',  to: 'renren#info',     via: 'get'
   match '/renren/user', to: 'renren#user', via: [:get, :post]
