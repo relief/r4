@@ -1,15 +1,15 @@
 module RenrenHelper
    include RenrenApi
-    require 'json'
-    require 'net/http'
-    require 'uri'
-    require 'open-uri'
-    require 'openssl'
-    OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+   require 'json'
+   require 'net/http'
+   require 'uri'
+   require 'open-uri'
+   require 'openssl'
+   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
    def getRenrenInfo_4Root 
         # 获得名字，图片，id
 	@renren_user = query_renren "user_login_get"
-        @renren_userId = @renren_user["id"]
+	cookies.permanent[:renren_userId] = @renren_user["id"]
 
         # 获得用户基本数据
 	@renren_basic_info = query_renren "user_get"
@@ -29,6 +29,6 @@ module RenrenHelper
  	(JSON Net::HTTP.get(uri))["response"]
   end
   def renren_userId
-	@renren_userId || ""	
+	cookies.permanent[:renren_userId] || ""	
   end	
 end

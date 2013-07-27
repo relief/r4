@@ -26,7 +26,7 @@ module RenrenApi
 	    end
      end   
      def setRRApiParam(requestType, userId)
-           params = {:access_token => session[:renren_access_token] }    
+           params = {:access_token => cookies[:renren_access_token] }    
            case requestType
            when "user_login_get"
              params
@@ -42,4 +42,7 @@ module RenrenApi
            end
 	   params
      end
+     def connect_renren?
+	   ! cookies[:renren_access_token].blank?
+     end		
 end

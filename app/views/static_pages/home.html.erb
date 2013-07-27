@@ -18,7 +18,9 @@
     <div class="span8">
       <h3>Micropost Feed</h3>
       <%= render 'shared/feed' %>
+	<% if connect_renren? %>
       <%= render 'renren/renren_info' %>
+	<% end %>
     </div>
   </div>  
 <% else %>
