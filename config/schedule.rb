@@ -6,7 +6,10 @@
 # Example:
 #
 set :output, "cron_log.log"
- 
+
+every :hour do
+	command " echo ' hello ' "
+end 
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
