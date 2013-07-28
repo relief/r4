@@ -1,8 +1,11 @@
 July 14,2013 
- 	Start everything. Finish register part with tutorial. 
+ 	relief: Start everything. Finish register part with tutorial. 
 July 15,2013
-	sign-in page
+	relief: sign-in page
 July 17,2013 
-	Sign-in, Sign-out, update profile, authentication control and admin delete 
-2013.7.19 
-	Update rails to 2.0.0. It is very weird since the tutorial suddently goes from 2nd to 3rd. The integration_test still fails and don't know why. Lucky, compose microposts works well. 
+	relief: Sign-in, Sign-out, update profile, authentication control and admin delete 
+July 19,2013
+	relief: Update rails to 2.0.0. It is very weird since the tutorial suddently goes from 2nd to 3rd. The integration_test still fails and don't know why. Lucky, compose microposts works well. 
+July 27,2013
+	relief: secretwind move in ... welcome!
+
