@@ -1,33 +1,4 @@
-<% if signed_in? %>
-  <div class="row">
-    <aside class="span4">
-      <section>
-        <%= render 'shared/user_info' %>
-      </section>
-      <section>
-        <%= render 'shared/stats' %>
-      </section>
-      <section>
-        <%= render 'shared/micropost_form' %>
-      </section>
-      <section>
- 	<%= render 'renren/connect_renren' %>
-      </section>
-    </aside>
-    <div class="span8">
-      <h3>Micropost Feed</h3>
-      	<%= render 'shared/feed' %>
-	<% if connect_renren? %>
-      		<%= render 'renren/renren_info' %>
-		<%= link_to "基本信息", renren_basic_info_path %>
-		<%= link_to "主页信息", renren_profile_path %>
-		<%= link_to "新鲜事",   renren_feed_path %>
-		<%= link_to "好友列表", renren_friend_list_path %>
-	<% end %>
-    </div>
-  </div>  
-<% else %>
-  <div class="center hero-unit">
+<div class="center hero-unit">
     <h1>Welcome to the Sample App</h1>
 
     <h2>
@@ -38,7 +9,6 @@
 
     <%= link_to "Sign up now!", signup_path, 
                                 class: "btn btn-large btn-primary" %>
-  </div>
+</div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
-<% end %> 
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>

@@ -1,0 +1,86 @@
+def client
+ 66         OAuth2::Client.new(Api_key,Api_secret,:site => {
+ 67           :url=>'https://graph.renren.com',
+ 68           :response_type=>'code'},
+ 69           :access_token_url => 'https://graph.renren.com/oauth/token')
+ 70      end
+ 71      def connect_renren?
+ 72          !current_user.user_renrens.blank?
+ 73      end
+ 74      def get_renren_id
+ 75          current_user.user_renrens.last.renren_id || ""
+ 76      end
+ 77      def get_access_token
+ 78          current_user.user_renrens.last.access_token
+ 79      end
+
+
+ def query_renren(queryType)
+ 22          uri = setRRApiUri(queryType)
+ 23          params = setRRApiParam(queryType, get_renren_id)
+ 24          print uri
+ 25          print "-----------------------------"
+ 26          print params
+ 27          uri.query = URI.encode_www_form(params)
+ 28          a = (JSON Net::HTTP.get(uri))#["response"]
+ 29          print "-----------------------------"
+ 30          print a
+ 31      end
+
+def login
+ 10         if !signed_in?
+ 11                 redirect_to root_url
+ 12         else
+ 13           redirect_to client.authorize_url(
+ 14              :client_id    => ClientID,
+ 15              :redirect_uri => redirect_url,
+ 16              :response_type=> 'code',
+ 17              :scope => 'read_user_feed'
+ 18           )
+ 19         end
+ 20     end
+
+  #session[:renren_session_key]= res["renren_token"]["session_key"]
+ 50         if @user_renren.save
+ 51          #   redirect_to help_url
+ 52             @renren_login_info = query_renren("user_login_get")
+ 53             @user_renren[:renren_id] = @renren_login_info["id"]
+ 54             @user_renren[:large_img] = @renren_login_info["avatar"][3]["url"]
+ 55             @user_renren.save
+ 56         else
+ 57             flash[:fail] = "Fail: Can't connect Renren"
+ 58         end
+
+
+  1 <% if signed_in? %>
+  2   <div class="row">
+  3     <aside class="span4">
+  4       <section>
+  5         <%= render 'shared/user_info' %>
+  6       </section>
+  7       <section>
+  8         <%= render 'shared/stats' %>
+  9       </section>
+ 10       <section>
+ 11         <%= render 'shared/micropost_form' %>
+ 12       </section>
+ 13       <section>
+ 14         <%= render 'renren/connect_renren' %>
+ 15       </section>
+ 16     </aside>
+ 17     <div class="span8">
+ 18       <h3>Micropost Feed</h3>
+ 19         <%= render 'shared/feed' %>
+ 20         <% if connect_renren? %>
+ 21                 <%= render 'renren/renren_info' %>
+ 22                 <%= link_to "基本信息", renren_basic_info_path %>
+ 23                 <%= link_to "主页信息", renren_profile_path %>
+ 24                 <%= link_to "新鲜事",   renren_feed_path %>
+ 25                 <%= link_to "好友列表", renren_friend_list_path %>
+ 26         <% end %>
+ 27     </div>
+ 28   </div>
+ 29 <% else %>
+
+
+
