@@ -1,0 +1,12 @@
+ 以下是开发的几个环节：
+	1. 在master下，更新本地文件到最新： git pull
+	2. 建立新的或已有的branch，进行修改： git checkout -b test
+	3. 在当前branch上进行修改，本地rails s测试。
+	4. 开发完毕后，切换回master： git checkout master
+	5. 合并开发branch和master： git merge test
+	6. 进行git add ./git add -u .
+	       git commit -m "asdfasd"
+	       git push 提交至github
+	7. git push heroku 进行服务器端的测试
+		备注： heroku logs可查看运行信息
+	8. 工作结束可修改README文件，加入日志信息
