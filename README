@@ -11,4 +11,8 @@ July 27,2013
 July 28,2013
 	sevin: I'm in. test git.
 	relief: Break home into two seperate web pages. Now we have three main pages: home page首页(for sign up and sign-in), user-feed用户新鲜事页(the page to view feeds), user-profile用户个人主页(the page to view all the information,microposts, photos of itself)
+July 29,2013
+	relief: Repair renren, add user_renren model with storing renren_id,renren_name,large_img,access_token and session_key. Refreshing access_token still remains a problem to be fixed later.
+July 30,2013
+	relief: Get stuck in Gem "Whenever", I can't use other method from model or helpers! Wield thing about the path. Plan to try it again tonight!
 

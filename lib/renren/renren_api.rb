@@ -26,7 +26,6 @@ module RenrenApi
 	end
      end
      def query_renren(queryType)
-
 	 uri = URI.encode(setRRApiUri(queryType))
 	 params = URI.encode_www_form(setRRApiParam(queryType))
 	 request =  "#{uri}?#{params}"

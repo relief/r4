@@ -5,11 +5,21 @@
 
 # Example:
 #
-set :output, "cron_log.log"
+set :output, "/mnt/d/rails/r4/cron_log.log"
+#set :job_template, "/bin/bash -i -c ':job'"
+set :environment, 'development'
+set :path, '/mnt/d/rails/r4'
+#env :PATH, ENV['PATH']
 
-every :hour do
-	command " echo ' hello ' "
-end 
+every 1.minute do
+  command "echo :path"                             # confirm shell variable PATH was loaded
+  
+  command "pwd"                                    # visualize current directory
+  #command "rvm current"                            # visualized default ruby version and gemset
+  runner "CrawlDwjl.getPage" #, :environment => 'development'
+  #runner 'CrawlDwjl.getPage "www.google.com"'
+end
+
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
