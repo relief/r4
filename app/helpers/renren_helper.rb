@@ -22,13 +22,5 @@ module RenrenHelper
 	# 获得用户好友
 	@renren_friend_list = query_renren "friend_list"
   end
-  def query_renren(queryType)
- 	uri = setRRApiUri(queryType)
-        params = setRRApiParam(queryType, renren_userId)
- 	uri.query = URI.encode_www_form(params)
- 	(JSON Net::HTTP.get(uri))["response"]
-  end
-  def renren_userId
-	cookies.permanent[:renren_userId] || ""	
-  end	
+  	
 end

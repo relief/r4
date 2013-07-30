@@ -1,4 +1,4 @@
-<% renren_user = query_renren "user_login_get" %>
-<h1> <%= renren_user["name"] %> </h1>
-<h2> id: <%=renren_userId  %>  </h2>
-<h2> <%= image_tag(renren_user["avatar"][3]["url"], alt: "Photo") %></h2>
+<% renren_user = get_login_info %>
+<h1> <%= get_renren_name %> </h1>
+<h2> id: <%=get_renren_id  %>  </h2>
+<h2> <%= image_tag(get_renren_large_img, alt: "Photo") %></h2>

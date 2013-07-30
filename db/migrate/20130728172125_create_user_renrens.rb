@@ -1,8 +1,9 @@
 class CreateUserRenrens < ActiveRecord::Migration
   def change
     create_table :user_renrens do |t|
-      t.integer :user_id
+      t.references :user
       t.integer :renren_id
+      t.string :renren_name
       t.string :access_token
       t.string :session_key
       t.string :large_img

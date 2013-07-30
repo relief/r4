@@ -18,7 +18,7 @@
     <%= render 'follow_form' if signed_in? %>   
     <h3>Micropost Feed</h3>
          <%= render 'shared/feed' %>
-    <% if 1 == 0 %> # connect_renren? %>
+    <% if connect_renren? %>
          <%= render 'renren/renren_info' %>
          <%= link_to "基本信息", renren_basic_info_path %>
          <%= link_to "主页信息", renren_profile_path %>
