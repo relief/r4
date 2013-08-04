@@ -1,9 +1,9 @@
 class CrawlDwjl < ActiveRecord::Base
-  require 'json'
-  require 'net/https'
-  require 'uri'
-  require 'open-uri'
-  require 'openssl'
+  #require 'json'
+  #require 'net/https'
+  #require 'uri'
+  #require 'open-uri'
+  #require 'openssl'
 
   def self.getPage#(url)
 	url = "www.google.com"
