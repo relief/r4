@@ -1,20 +1,6 @@
 class RenrenController < ApplicationController
-  include RenrenApi
-  require 'oauth2'
-  require 'json'
-  require 'net/https'
-  require 'uri'
-  require 'open-uri'
-  require 'openssl'
-  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
-  
+    include RenrenApi
 
-    def client
-      OAuth2::Client.new(Api_key,Api_secret,:site => {
-        :url=>'https://graph.renren.com',
-        :response_type=>'code'},
-  	:access_token_url => 'https://graph.renren.com/oauth/token')
-    end
     def login
 	if !signed_in?
                 redirect_to root_url

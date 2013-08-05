@@ -1,11 +1,5 @@
 module RenrenHelper
    include RenrenApi
-   require 'json'
-   require 'net/http'
-   require 'uri'
-   require 'open-uri'
-   require 'openssl'
-   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
    def getRenrenInfo_4Root 
         # 获得名字，图片，id
 	@renren_user = query_renren "user_login_get"

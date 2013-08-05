@@ -1,4 +1,12 @@
 module RenrenApi
+     require 'oauth2'
+     require 'json'
+     require 'net/https'
+     require 'uri'
+     require 'open-uri'
+     require 'openssl'
+ #    OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
      Base     = "https://api.renren.com/v2/"
      ClientID = '238917'
      Api_key  = 'ef1c4b01abd34dd59e1123c8bf20bc15'
@@ -11,7 +19,7 @@ module RenrenApi
         end
      end
      def client
-       OAuth2::Client.new(Api_key,Api_secret,:site => {
+       OAuth2::Client.new(Api_key,Api_secret,:site => {  
          :url=>'https://graph.renren.com',
          :response_type=>'code'},
   	 :access_token_url => 'https://graph.renren.com/oauth/token')
