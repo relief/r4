@@ -15,4 +15,6 @@ July 29,2013
 	relief: Repair renren, add user_renren model with storing renren_id,renren_name,large_img,access_token and session_key. Refreshing access_token still remains a problem to be fixed later.
 July 30,2013
 	relief: Get stuck in Gem "Whenever", I can't use other method from model or helpers! Wield thing about the path. Plan to try it again tonight!
+Aug 5,2013
+	relief: Whenever works, successfully crawl baidu. Face problem of encoding when fetching web page. GB2312->utf-8
 

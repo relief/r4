@@ -1,4 +1,5 @@
 class CrawlDwjl < ActiveRecord::Base
+ 
   extend RenrenApi
   require 'oauth2'
   require 'json'
@@ -13,9 +14,16 @@ class CrawlDwjl < ActiveRecord::Base
 	getZJUDwjl
   end
   def self.getZJUDwjl
-	print DWJLURL	
+	puts DWJLURL	
 	data = URI.parse(URI.encode(DWJLURL)).read
-	print data[0..5]
-	print data.class
+	10.times do
+	  head = data.index('target="_blank" title="')
+	  data = data[head..-1]
+	  tail = data.index('">')
+
+	  #encoding: GB2312
+	  puts data[23..tail].force_encoding("UTF-8")
+	  puts data[23..tail].force_encoding("GB2312")
+	end
   end
 end

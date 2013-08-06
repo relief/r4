@@ -26,5 +26,6 @@ module SampleApp
 
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     config.autoload_paths += Dir["#{Rails.root}/lib/renren"]
+    config.autoload_paths += Dir["#{Rails.root}/lib/crawl"]
   end
 end
