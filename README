@@ -19,3 +19,4 @@ Aug 5,2013
 	relief: Whenever works, successfully crawl baidu. Face problem of encoding when fetching web page. GB2312->utf-8
 Aug 6,2013
 	relief: Solve encoding problem with string.encode! "des" "src".... Problems with update database CrawlDwjl occurs. Class method cannot get access to table.
+	relief Later: Successfully save the dwjl into table CrawlDwjl, thanks god!

@@ -7,28 +7,16 @@
 #
 set :output, "/mnt/d/rails/r4/cron_log.log"
 #set :job_template, "/bin/bash -i -c ':job'"
-#set :environment, 'development'
-#set :path, '/mnt/d/rails/r4'
-#env :path, '/mnt/d/rails/r4'
 
 every 1.minute do
-#  command "echo #{:path}"                             # confirm shell variable PATH was loaded
-  
-#  command "pwd"                                    # visualize current directory
+  #command "echo $PATH"                             # confirm shell variable P 
+  #command "cd #{path}"                             # this is not needed
+  #command "pwd"                                    # visualize current directory
   #command "rvm current"                            # visualized default ruby version and gemset
-  #runner "CrawlDwjl.getPage" #, :environment => 'development'
-  runner 'CrawlController.printa' 
+  #command "rvm use ruby-1.9.3-p448@railstutorial_rails_4_0"
+  #command "rvm current"  
+  
+ runner 'CrawlDwjl.InfofromZJU', :environment => :development
 end
-
-#
-# every 2.hours do
-#   command "/usr/bin/some_great_command"
-#   runner "MyModel.some_method"
-#   rake "some:great:rake:task"
-# end
-#
-# every 4.days do
-#   runner "AnotherModel.prune_old_records"
-# end
 
 # Learn more: http://github.com/javan/whenever
