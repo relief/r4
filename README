@@ -17,4 +17,5 @@ July 30,2013
 	relief: Get stuck in Gem "Whenever", I can't use other method from model or helpers! Wield thing about the path. Plan to try it again tonight!
 Aug 5,2013
 	relief: Whenever works, successfully crawl baidu. Face problem of encoding when fetching web page. GB2312->utf-8
-
+Aug 6,2013
+	relief: Solve encoding problem with string.encode! "des" "src".... Problems with update database CrawlDwjl occurs. Class method cannot get access to table.

@@ -12,12 +12,12 @@ set :output, "/mnt/d/rails/r4/cron_log.log"
 #env :path, '/mnt/d/rails/r4'
 
 every 1.minute do
-  command "echo #{:path}"                             # confirm shell variable PATH was loaded
+#  command "echo #{:path}"                             # confirm shell variable PATH was loaded
   
-  command "pwd"                                    # visualize current directory
+#  command "pwd"                                    # visualize current directory
   #command "rvm current"                            # visualized default ruby version and gemset
   #runner "CrawlDwjl.getPage" #, :environment => 'development'
-  runner 'CrawlDwjl.InfofromZJU' 
+  runner 'CrawlController.printa' 
 end
 
 #

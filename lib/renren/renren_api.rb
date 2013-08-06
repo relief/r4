@@ -24,6 +24,7 @@ module RenrenApi
          :response_type=>'code'},
   	 :access_token_url => 'https://graph.renren.com/oauth/token')
      end
+     DWJLURL = 'http://ugrs.zju.edu.cn/redir.php?catalog_id=711320' 
      def get_login_info
 	if get_renren_id && get_renren_name && get_renren_large_img
 		# Information already exists
@@ -37,10 +38,8 @@ module RenrenApi
 	 uri = URI.encode(setRRApiUri(queryType))
 	 params = URI.encode_www_form(setRRApiParam(queryType))
 	 request =  "#{uri}?#{params}"
-	 print request
-	 print "------------------------"
 	 resp = (JSON URI.parse(request).read)
-	 print resp
+	  
 	 resp["response"]
      end
      def setRRApiUri(requestType)
