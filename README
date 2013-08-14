@@ -20,3 +20,6 @@ Aug 5,2013
 Aug 6,2013
 	relief: Solve encoding problem with string.encode! "des" "src".... Problems with update database CrawlDwjl occurs. Class method cannot get access to table.
 	relief Later: Successfully save the dwjl into table CrawlDwjl, thanks god!
+
+Aug 14,2013
+	relief: I am back... I decide to carry on this project no matter anything happens.  Modify the index page to directly login. Not too much modification, but learnt a log about bootstrap and form of rails.
