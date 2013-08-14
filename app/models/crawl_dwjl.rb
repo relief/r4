@@ -1,30 +1,16 @@
 class CrawlDwjl < ActiveRecord::Base
- # extend StrConvert 
-  require 'json'
   require 'net/https'
   require 'uri'
   require 'open-uri'
-  require 'openssl'
-#     OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE 
+  
   DWJLURL = 'http://ugrs.zju.edu.cn/redir.php?catalog_id=711320'
   DWJLBASE = 'http://ugrs.zju.edu.cn/'
 
-#  attr_accessible :url, :title
-  def self.InfofromZJU
-	getZJUDwjl
-  end
-  def self.getZJUDwjl
-	#puts DWJLURL	
+  def self.get
 	data = URI.parse(URI.encode(DWJLURL)).read
 	data.encode! 'utf-8' ,'gb2312'
 
  	lastDwjl = CrawlDwjl.last
-	#puts lastDwjl.title
-	#new(:title => "lll")
-	#tmp.save
-	#top = first
-	#top = where(title: "bottom")
-	#puts top.to_yaml
 	13.times do
 	  time_head = data.index('<li><span>[')
 	  data = data[time_head..-1]

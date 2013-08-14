@@ -15,8 +15,9 @@ every 1.minute do
   #command "rvm current"                            # visualized default ruby version and gemset
   #command "rvm use ruby-1.9.3-p448@railstutorial_rails_4_0"
   #command "rvm current"  
-  
- runner 'CrawlDwjl.InfofromZJU', :environment => :development
+  command "date"  
+  runner 'CrawlDwjl.get', :environment => :development
+
 end
 
 # Learn more: http://github.com/javan/whenever

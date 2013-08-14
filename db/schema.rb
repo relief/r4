@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130730165437) do
+ActiveRecord::Schema.define(version: 20130809040555) do
+
+  create_table "crawl_bksies", force: true do |t|
+    t.string   "title"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "crawl_bksies", ["created_at"], name: "index_crawl_bksies_on_created_at"
 
   create_table "crawl_dwjls", force: true do |t|
     t.string   "title"
