@@ -1,3 +1,5 @@
+###Aug 21,2013
+	relief: After a long time of consideration, I decide to focus on event part, starting from purely text-related event. I try to design the index page today. Hope people will like it!
 ###Aug 14,2013
 	relief: I am back... I decide to carry on this project no matter anything happens.  Modify the index page to directly login. Not too much modification, but learnt a log about bootstrap and form of rails.
 ###Aug 6,2013

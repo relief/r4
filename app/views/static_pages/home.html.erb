@@ -1,14 +1,24 @@
-<div class="center hero-unit">
+<form class="form-horizontal">
+<div class="span12 hero-unit">
+    <div class="row-fluid">
     
-
-	<h1>Welcome to the Sample App</h1>
-	<h2>
-	      This is the home page for the
-	      <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-	      sample application.
-	</h2>
-    <%= link_to "加入我们!", signup_path, 
+     	 <%= render 'index_form/title_and_description' %>
+	 <div class="span5" >	
+		 <div class ="hero-unit" style="background-color: #aac" >
+		    <%= render 'index_form/time_span' %>
+		 </div>
+ 		 <div class ="hero-unit" style="background-color: #acc" >
+		    <%= render 'index_form/event_destination' %>
+		 </div>
+         </div>
+         <div class="span6 hero-unit" style="background-color: #aaa">
+      	         <%= render 'index_form/place_span' %>
+         </div>
+    </div>
+    
+    <h1><%= link_to "加入我们!", signup_path, 
                                 class: "btn btn-large btn-primary" %>
-    
+    </h1>
 </div>
+</form>
 
