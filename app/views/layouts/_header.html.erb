@@ -2,16 +2,16 @@
   <div class="navbar-inner">
     <div class="container">
       
-      <%= link_to "浙大人", root_path, id: "logo", class: "brand" %>
+      <%= link_to "事件侠", root_path, id: "logo", class: "brand" %>
       <nav>
         <ul class="nav pull-right">
 	  <% if !signed_in? %>
 	     <li>
 		 <form class="navbar-form form-inline pull-left" action="/sessions" method = "Post">
-		   <input name="session[email]" type="text" class="span2" placeholder="用户名">
-		   <input name="session[password]" type="password" class="span2" placeholder="密码">
+		   <input name="session[email]" type="text" class="span2" placeholder="用户名"></input>
+		   <input name="session[password]" type="password" class="span2" placeholder="密码"></input>
 		   <button type="submit" class="btn">登陆</button>
-		   <input type="hidden" name="authenticity_token" value=<%=session[:authenticity_token] %>
+		   <input type="hidden" name="authenticity_token" value= "<%=session[:authenticity_token]%>" ></input>
 		 </form>
 	    </li>
 	  <% else %>	

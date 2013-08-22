@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  resources :post_events
+
   root to: 'static_pages#home'
   
   resources :users do
