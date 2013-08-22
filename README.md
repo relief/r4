@@ -1,3 +1,5 @@
+###Aug 22,2013
+	relief: Adjust the input in index page. All the event posted will be sent to /post_events with title, description, time, campus, building, detail_place as well as the destination among rr, xlwb, txwb.
 ###Aug 21,2013
 	relief: After a long time of consideration, I decide to focus on event part, starting from purely text-related event. I try to design the index page today. Hope people will like it!
 ###Aug 14,2013

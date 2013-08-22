@@ -8,7 +8,7 @@
 set :output, "/mnt/d/rails/r4/cron_log.log"
 #set :job_template, "/bin/bash -i -c ':job'"
 
-every 1.minute do
+every 30.minutes do
   #command "echo $PATH"                             # confirm shell variable P 
   #command "cd #{path}"                             # this is not needed
   #command "pwd"                                    # visualize current directory
