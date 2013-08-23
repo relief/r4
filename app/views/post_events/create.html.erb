@@ -1,1 +1,12 @@
-<%= @title %>
+<form action= "/post_events" method = "Put">
+<div class="row">
+  <div class="span5 offset2">
+     <textarea class="span5" rows="4" name = "content" id = "postEvent"><%=@content%></textarea>
+<%= render 'index_form/event_destination' %>
+  </div>
+  <div class="span2">
+     <button class="span2 btn btn-info" id = "postEvent" type="button">Go!</button>
+  </div>
+</div>
+<input type="hidden" name="authenticity_token" value= "<%=session[:authenticity_token]%>" ></input>
+</form>

@@ -3,20 +3,21 @@
     <div class="row-fluid">
     
      	 <%= render 'index_form/title_and_description' %>
-	 <div class="span5" >	
-		 <div class ="hero-unit" style="background-color: #aac" >
-		    <%= render 'index_form/time_span' %>
-		 </div>
- 		 <div class ="hero-unit" style="background-color: #acc" >
-		    <%= render 'index_form/event_destination' %>
-		 </div>
-         </div>
-         <div class="span6 hero-unit" style="background-color: #aaa">
+	 <div class="span6 hero-unit" style="background-color: #aac">
       	         <%= render 'index_form/place_span' %>
          </div>
+	 <div class="span5" >	
+		 <div class ="hero-unit" style="background-color: #acc"  >
+		    <%= render 'index_form/time_span' %>
+		 </div>
+ 		 <div class ="hero-unit" >
+   		    <h1> <button class="btn-large btn-primary">生成事件</button></h1>
+		 </div>
+         </div>
+         
     </div>
     
-    <h1> <button class="btn-large btn-primary">发布事件</button></h1>
+
 </div>
 <input type="hidden" name="authenticity_token" value= "<%=session[:authenticity_token]%>" ></input>
 </form>

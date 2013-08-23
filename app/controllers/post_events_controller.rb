@@ -24,7 +24,8 @@ class PostEventsController < ApplicationController
   # POST /post_events
   # POST /post_events.json
   def create
-        @title = params[:title]
+        @content = "【" + params[:title] + "】" + params[:time] + " 于\n" + params[:campus] + "校区" + params[:building] + params[:detail_place] +
+"\n" + " 说明: " + params[:description]
     #@post_event = PostEvent.new(post_event_params)
 =begin
     respond_to do |format|
