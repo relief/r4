@@ -6682,3 +6682,152 @@ Fri Aug 23 11:30:01 CST 2013
 Fri Aug 23 12:00:01 CST 2013
 Fri Aug 23 12:30:01 CST 2013
 Fri Aug 23 13:00:01 CST 2013
+Fri Aug 23 15:00:01 CST 2013
+Sat Aug 24 11:00:01 CST 2013
+Sat Aug 24 11:30:01 CST 2013
+Sat Aug 24 12:00:01 CST 2013
+Sat Aug 24 12:30:01 CST 2013
+Sat Aug 24 13:00:01 CST 2013
+Sat Aug 24 13:30:01 CST 2013
+Sat Aug 24 14:30:02 CST 2013
+/home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands/runner.rb:53:in `eval': Connection timed out - connect(2) (Errno::ETIMEDOUT)
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http.rb:878:in `open'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http.rb:878:in `block in connect'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/timeout.rb:52:in `timeout'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http.rb:877:in `connect'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http.rb:862:in `do_start'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/net/http.rb:851:in `start'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:313:in `open_http'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:708:in `buffer_open'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:210:in `block in open_loop'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:208:in `catch'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:208:in `open_loop'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:149:in `open_uri'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:688:in `open'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:696:in `read'
+	from /mnt/d/rails/r4/app/models/crawl_dwjl.rb:10:in `get'
+	from (eval):1:in `<top (required)>'
+	from /home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands/runner.rb:53:in `eval'
+	from /home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands/runner.rb:53:in `<top (required)>'
+	from /home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands.rb:86:in `require'
+	from /home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands.rb:86:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+Sat Aug 24 15:30:01 CST 2013
+Sat Aug 24 20:30:02 CST 2013
+Sat Aug 24 21:00:01 CST 2013
+Sat Aug 24 21:30:01 CST 2013
+Sat Aug 24 22:00:01 CST 2013
+Sat Aug 24 22:30:01 CST 2013
+Sat Aug 24 23:00:02 CST 2013
+Sat Aug 24 23:30:01 CST 2013
+Sun Aug 25 09:30:01 CST 2013
+Sun Aug 25 10:00:02 CST 2013
+Sun Aug 25 10:30:01 CST 2013
+Sun Aug 25 11:00:01 CST 2013
+Sun Aug 25 13:30:02 CST 2013
+Sun Aug 25 14:00:02 CST 2013
+Sun Aug 25 14:30:01 CST 2013
+Sun Aug 25 18:30:01 CST 2013
+Sun Aug 25 19:00:01 CST 2013
+Sun Aug 25 20:00:01 CST 2013
+Sun Aug 25 23:00:02 CST 2013
+Sun Aug 25 23:30:01 CST 2013
+Mon Aug 26 22:30:01 CST 2013
+Mon Aug 26 23:00:01 CST 2013
+Mon Aug 26 23:30:01 CST 2013
+Tue Aug 27 09:30:01 CST 2013
+Tue Aug 27 10:00:01 CST 2013
+Tue Aug 27 10:30:01 CST 2013
+Tue Aug 27 11:00:01 CST 2013
+Tue Aug 27 21:00:01 CST 2013
+Tue Aug 27 21:30:01 CST 2013
+Wed Aug 28 18:00:01 CST 2013
+Wed Aug 28 20:00:01 CST 2013
+Wed Aug 28 20:30:01 CST 2013
+Thu Aug 29 12:30:02 CST 2013
+Thu Aug 29 13:00:01 CST 2013
+Thu Aug 29 13:30:01 CST 2013
+Fri Aug 30 13:00:02 CST 2013
+/home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands/runner.rb:53:in `eval': 404 Not Found (OpenURI::HTTPError)
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:708:in `buffer_open'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:210:in `block in open_loop'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:208:in `catch'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:208:in `open_loop'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:149:in `open_uri'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:688:in `open'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:696:in `read'
+	from /mnt/d/rails/r4/app/models/crawl_dwjl.rb:10:in `get'
+	from (eval):1:in `<top (required)>'
+	from /home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands/runner.rb:53:in `eval'
+	from /home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands/runner.rb:53:in `<top (required)>'
+	from /home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands.rb:86:in `require'
+	from /home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands.rb:86:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+Fri Aug 30 13:30:01 CST 2013
+Fri Aug 30 14:00:01 CST 2013
+Fri Aug 30 14:30:01 CST 2013
+Fri Aug 30 15:00:01 CST 2013
+Sat Aug 31 21:00:01 CST 2013
+Sat Aug 31 23:30:01 CST 2013
+Sun Sep  1 00:00:01 CST 2013
+Sun Sep  1 00:30:01 CST 2013
+Sun Sep  1 01:00:01 CST 2013
+Sun Sep  1 01:30:01 CST 2013
+Sun Sep  1 02:00:01 CST 2013
+Sun Sep  1 02:30:01 CST 2013
+Sun Sep  1 03:00:01 CST 2013
+Sun Sep  1 03:30:01 CST 2013
+Sun Sep  1 04:00:01 CST 2013
+Sun Sep  1 04:30:01 CST 2013
+Sun Sep  1 05:00:01 CST 2013
+Sun Sep  1 05:30:01 CST 2013
+Sun Sep  1 06:00:01 CST 2013
+Sun Sep  1 06:30:01 CST 2013
+Mon Sep  2 10:30:01 CST 2013
+/home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands/runner.rb:53:in `eval': 404 Not Found (OpenURI::HTTPError)
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:708:in `buffer_open'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:210:in `block in open_loop'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:208:in `catch'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:208:in `open_loop'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:149:in `open_uri'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:688:in `open'
+	from /home/relief/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/open-uri.rb:696:in `read'
+	from /mnt/d/rails/r4/app/models/crawl_dwjl.rb:10:in `get'
+	from (eval):1:in `<top (required)>'
+	from /home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands/runner.rb:53:in `eval'
+	from /home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands/runner.rb:53:in `<top (required)>'
+	from /home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands.rb:86:in `require'
+	from /home/relief/.rvm/gems/ruby-2.0.0-p247@railstutorial_rails_4_0/gems/railties-4.0.0/lib/rails/commands.rb:86:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+Mon Sep  2 11:00:01 CST 2013
+Mon Sep  2 11:30:02 CST 2013
+Mon Sep  2 12:00:01 CST 2013
+Mon Sep  2 17:00:02 CST 2013
+2013-09-02
+http://ugrs.zju.edu.cn/redir.php?catalog_id=711320&object_id=891606
+关于选拔本科生申报2014年法国巴黎高科硕士学位奖学金项目的通知
+2013-09-02
+http://ugrs.zju.edu.cn/redir.php?catalog_id=711320&object_id=891602
+关于选拔本科生赴法国参加中央理工大学校集团硕士双学位项目（中法4+4项目）的通知
+2013-09-02
+http://ugrs.zju.edu.cn/redir.php?catalog_id=711320&object_id=891587
+关于选拔本科生赴瑞士苏黎世大学参加2013-2014春夏学期交换生项目的通知
+Mon Sep  2 17:30:01 CST 2013
+2013-09-02
+http://ugrs.zju.edu.cn/redir.php?catalog_id=711320&object_id=891606
+关于选拔本科生申报2014年法国巴黎高科硕士学位奖学金项目的通知
+2013-09-02
+http://ugrs.zju.edu.cn/redir.php?catalog_id=711320&object_id=891602
+关于选拔本科生赴法国参加中央理工大学校集团硕士双学位项目（中法4+4项目）的通知
+Mon Sep  2 18:00:01 CST 2013
+2013-09-02
+http://ugrs.zju.edu.cn/redir.php?catalog_id=711320&object_id=891606
+关于选拔本科生申报2014年法国巴黎高科硕士学位奖学金项目的通知
+Mon Sep  2 18:30:01 CST 2013
+Mon Sep  2 19:00:01 CST 2013
+Mon Sep  2 19:30:01 CST 2013
+Mon Sep  2 20:00:01 CST 2013
+Mon Sep  2 20:30:01 CST 2013

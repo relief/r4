@@ -41,6 +41,12 @@ ActiveRecord::Schema.define(version: 20130822023128) do
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
 
   create_table "post_events", force: true do |t|
+    t.string   "title"
+    t.datetime "time"
+    t.string   "campus"
+    t.string   "building"
+    t.string   "detail_place"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

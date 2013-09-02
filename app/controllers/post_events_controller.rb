@@ -1,5 +1,6 @@
 class PostEventsController < ApplicationController
-  before_action :set_post_event, only: [:show, :edit, :update, :destroy]
+  include RenrenApi
+  before_action :set_post_event, only: [ :edit, :update, :destroy]
 
   # GET /post_events
   # GET /post_events.json
@@ -10,6 +11,14 @@ class PostEventsController < ApplicationController
   # GET /post_events/1
   # GET /post_events/1.json
   def show
+    @post_event = PostEvent.new
+    @post_event[:title] = params[:title]    
+    @post_event[:time]  = params[:time]
+    @post_event[:campus]= params[:campus]
+    @post_event[:building] = params[:building]
+    @post_event[:detail_place] = params[:detail_place]
+    @post_event[:description]  = params[:description] 
+    @content = "【" + params[:title] + "】" + params[:time] + " 于\n" + params[:campus] + "校区" + params[:building] + params[:detail_place] + "\n" + " 说明: " + params[:description]
   end
 
   # GET /post_events/new
@@ -19,13 +28,18 @@ class PostEventsController < ApplicationController
 
   # GET /post_events/1/edit
   def edit
+    
   end
 
   # POST /post_events
   # POST /post_events.json
   def create
-        @content = "【" + params[:title] + "】" + params[:time] + " 于\n" + params[:campus] + "校区" + params[:building] + params[:detail_place] +
-"\n" + " 说明: " + params[:description]
+     @content = params[:content]
+     uri = URI.parse("https://api.renren.com/v2/feed/put")
+     response = Net::HTTP.post_form(uri, {:access_token => get_access_token, :message => @content, :title => "来自事件侠" , :description => "." , :targetUrl => 'http://www.baidu.com'})
+     @rtn = response.body.force_encoding('UTF-8') 
+     # @rtn = query_renren("feed_put") 
+  end
     #@post_event = PostEvent.new(post_event_params)
 =begin
     respond_to do |format|
@@ -38,7 +52,6 @@ class PostEventsController < ApplicationController
       end
     end
 =end
-  end
 
   # PATCH/PUT /post_events/1
   # PATCH/PUT /post_events/1.json
