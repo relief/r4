@@ -1,6 +1,13 @@
+<script type = "text/javascript">
+      	var YQOptions  = ["曹光彪楼","32舍"];
+	var ZJGOptions = ["蓝田","青溪","白沙","翠柏","紫云","丹青","碧峰","校医院","堕落街","东区","西区","临湖餐厅"];
+ 	var XXOptions  = ["西溪校区"];
+	var ZJOptions  = ["zj"];
+	var otherOptions = [];
+</script>
 <div class="control-group">
     <label class="control-label" for="inputCampus">校区 *</label>
-    <select name="campus" >
+    <select name="campus" id="Choose_Campus">
        <option>紫金港</option>
        <option>玉泉</option>
        <option>西溪</option>
@@ -9,13 +16,8 @@
     </select>
 </div>
 <div class="control-group">
-    <label class="control-label" for="inputBuilding">所在建筑或附近建筑 *</label>
-    <select name="building" >
-       <option>紫金港</option>
-       <option>玉泉</option>
-       <option>西溪</option>
-       <option>之江</option>
-       <option>其他地点</option>
+    <label class="control-label" for="inputBuilding">所在建筑或附近建筑</label>
+    <select name="building" id="Choose_Building">
     </select>
 </div>
 <div class="control-group">
@@ -24,3 +26,33 @@
       <textarea rows="2" type="text" id="inputPosition" name="detail_place" placeholder="请输入详细位置"></textarea>
     </div>
 </div>
+<script type = "text/javascript">
+        var $bld = $("#Choose_Building")
+	changeBuilding(ZJGOptions);
+	$("#Choose_Campus").change(function(){
+		switch($("#Choose_Campus").val())
+		{
+		   case "玉泉":	
+			changeBuilding(YQOptions);
+			break;
+		   case "紫金港":
+			changeBuilding(ZJGOptions);
+			break;
+		   case "西溪":
+			changeBuilding(XXOptions);			
+			break;
+		   case "之江":
+			changeBuilding(ZJOptions);			
+			break;
+		   default:
+			changeBuilding(otherOptions);			
+		}
+	});
+	function changeBuilding(Options)
+	{
+		$bld.empty();
+		$.each(Options, function(index, value){
+			$bld.append($("<option></option>").text(value));
+		});		
+	}
+</script>

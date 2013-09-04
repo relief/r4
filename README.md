@@ -1,3 +1,7 @@
+###Sep 4 ,2013
+	relief: Now building list will change as the change of campus.
+###Sep 2 ,2013
+	relief: After Toefl, I continue the project. Now commit to Renren kind of work!
 ###Aug 22,2013
 	relief: Adjust the input in index page. All the event posted will be sent to /post_events with title, description, time, campus, building, detail_place as well as the destination among rr, xlwb, txwb.
 ###Aug 21,2013
